@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title></title>
+    <link rel="stylesheet" href="style.css">
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
@@ -31,10 +32,10 @@
 <div id='map'></div>
     <script> //cities
         const cities = L.layerGroup();
-        const mLittleton = L.marker([-8.448, 115.356]).bindPopup('This is Littleton, CO.').addTo(cities);
-        const mDenver = L.marker([-8.452, 115.610]).bindPopup('This is Denver, CO.').addTo(cities);
-        const mAurora = L.marker([-8.675, 115.210]).bindPopup('This is Aurora, CO.').addTo(cities);
-        const mGolden = L.marker([-8.358, 114.617]).bindPopup('This is Golden, CO.').addTo(cities);
+//         const mLittleton = L.marker([-8.448, 115.356]).bindPopup('This is Littleton, CO.').addTo(cities);
+//         const mDenver = L.marker([-8.452, 115.610]).bindPopup('This is Denver, CO.').addTo(cities);
+//         const mAurora = L.marker([-8.675, 115.210]).bindPopup('This is Aurora, CO.').addTo(cities);
+//         const mGolden = L.marker([-8.358, 114.617]).bindPopup('This is Golden, CO.').addTo(cities);
         const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    maxZoom: 19,
 	    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -50,6 +51,17 @@
 	zoom: 10,
 	layers: [osm, cities]
 });
+const mLittleton = L.marker([-8.448, 115.356]).addTo(cities);
+mLittleton.bindPopup("<div class='map-popup'><h2>Littleton, CO</h2><p>hi ini data meka, CO.</p></div>");
+
+const mDenver = L.marker([-8.452, 115.610]).addTo(cities);
+mDenver.bindPopup("<div class='map-popup'><h2>Denver, CO</h2><p>Deskripsi lokasi Denver, CO.</p></div>");
+
+const mAurora = L.marker([-8.675, 115.210]).addTo(cities);
+mAurora.bindPopup("<div class='map-popup'><h2>Aurora, CO</h2><p>Deskripsi lokasi Aurora, CO.</p></div>");
+
+const mGolden = L.marker([-8.358, 114.617]).addTo(cities);
+mGolden.bindPopup("<div class='map-popup'><h2>Golden, CO</h2><p>Deskripsi lokasi Golden, CO.</p></div>");
 
 //marker
     const marker = L.marker([-8.551,115.401]).addTo(map)

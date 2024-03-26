@@ -1,0 +1,18 @@
+.map-popup {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 200px;
+  }
+  
+  .map-popup h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .map-popup p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
